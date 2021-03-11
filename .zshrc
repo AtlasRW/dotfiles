@@ -24,6 +24,13 @@ antigen apply
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ALIASES
+alias ss="cmatrix -s"
+alias home="cd ~"
+
+alias src="exec zsh"
 alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
 alias p10krc="vim ~/.p10k.zsh"
+
+alias py="python3"
+alias js="node"
