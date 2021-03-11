@@ -38,9 +38,8 @@ alias js="node"
 
 # FUNCTIONS
 docker_new(){
-  t=$1_$RANDOM
-  docker run -dti -v /home/atlasrw/.data:/root/.data --name $t $1
-  docker_build $t
+  docker run -dti -v /home/atlasrw/.data:/root/.data --name $2 $1
+  docker_build $2
 }
 docker_build(){
   docker exec -ti $1 /bin/bash /root/.data/build.sh
