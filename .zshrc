@@ -31,10 +31,10 @@ alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
 alias p10krc="vim ~/.p10k.zsh"
 
-alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
-
 alias py="python3"
 alias js="node"
+
+alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
 
 # FUNCTIONS
 docker_new(){
