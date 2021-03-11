@@ -1,8 +1,6 @@
 *.*
 !.zshrc
 !.p10k.zsh
-!.bashrc
 !.antigen.zsh
 !.gitignore
 !.gitconfig
-!.profile
