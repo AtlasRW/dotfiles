@@ -38,9 +38,14 @@ alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
 
 # FUNCTIONS
 docker_new(){
-  docker run -dti -v /home/atlasrw/.data:/root/.data --name $2 $1
+  if [[ $3 ]]; then
+    docker run -dti -v /home/atlasrw/.data:/root/.data --name $2 -p $3 $1
+  else
+    docker run -dti -v /home/atlasrw/.data:/root/.data --name $2 $1
+  fi
   docker_build $2
 }
+
 docker_build(){
   docker exec -ti $1 /bin/bash /root/.data/build.sh
 ;}
