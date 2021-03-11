@@ -22,3 +22,8 @@ antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ALIASES
+alias bashrc="vim ~/.bashrc"
+alias zshrc="vim ~/.zshrc"
+alias p10krc="vim ~/.p10k.zsh"
