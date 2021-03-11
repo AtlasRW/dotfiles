@@ -26,11 +26,22 @@ antigen apply
 # ALIASES
 alias ss="cmatrix -s"
 alias home="cd ~"
-
 alias src="exec zsh"
 alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
 alias p10krc="vim ~/.p10k.zsh"
 
+alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
+
 alias py="python3"
 alias js="node"
+
+# FUNCTIONS
+docker_new(){
+  t=$1_$RANDOM
+  docker run -dti -v /home/atlasrw/.data:/root/.data --name $t $1
+  docker_build $t
+}
+docker_build(){
+  docker exec -ti $1 /bin/bash /root/.data/build.sh
+;}
