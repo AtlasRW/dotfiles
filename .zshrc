@@ -24,6 +24,7 @@ antigen apply
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ALIASES
+
 alias ss="cmatrix -s"
 alias home="cd ~"
 alias src="exec zsh"
@@ -37,15 +38,22 @@ alias js="node"
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
 
 # FUNCTIONS
+
 docker_new(){
+  # docker_new IMAGE NAME PORTS
   if [[ $3 ]]; then
     docker run -dti -v /home/atlasrw/.data:/root/.data --name $2 -p $3 $1
   else
     docker run -dti -v /home/atlasrw/.data:/root/.data --name $2 $1
   fi
-  docker_build $2
+  docker_build $1 $2
 }
 
 docker_build(){
-  docker exec -ti $1 /bin/bash /root/.data/build.sh
+  # docker_build IMAGE NAME
+  if [[ $1 == 'node'* ]]; then
+    docker exec -ti $2 /bin/bash /root/.data/node.sh
+  else
+    docker exec -ti $2 /bin/bash /root/.data/build.sh
+  fi
 }
