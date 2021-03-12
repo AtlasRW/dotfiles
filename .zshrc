@@ -48,4 +48,4 @@ docker_new(){
 
 docker_build(){
   docker exec -ti $1 /bin/bash /root/.data/build.sh
-;}
+}
