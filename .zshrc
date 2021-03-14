@@ -34,6 +34,7 @@ alias p10krc="vim ~/.p10k.zsh"
 
 alias py="python3"
 alias js="node"
+alias ts="ts-node"
 
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
 
@@ -51,9 +52,21 @@ docker_new(){
 
 docker_build(){
   # docker_build IMAGE NAME
-  if [[ $1 == 'node'* ]]; then
+  case $1 in
+  'node'*)
     docker exec -ti $2 /bin/bash /root/.data/node.sh
-  else
+    ;;
+  'python'*)
+    docker exec -ti $2 /bin/bash /root/.data/python.sh
+    ;;
+  'php'*)
+    docker exec -ti $2 /bin/bash /root/.data/php.sh
+    ;;
+  'httpd'*)
+    docker exec -ti $2 /bin/bash /root/.data/httpd.sh
+    ;;
+  *)
     docker exec -ti $2 /bin/bash /root/.data/build.sh
-  fi
+    ;;
+esac
 }
