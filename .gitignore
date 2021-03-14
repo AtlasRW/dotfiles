@@ -1,5 +1,4 @@
-*.*
-htdocs
+*
 !.zshrc
 !.p10k.zsh
 !.antigen.zsh
