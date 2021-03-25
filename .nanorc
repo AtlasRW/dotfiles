@@ -32,7 +32,7 @@ bind M-R redo main
 # bind ^Y redo main
 bind ^U undo main
 bind ^E redo main
-bind ^H chopwordleft main
+# bind ^H chopwordleft main
 
 ## SETTINGS
 
@@ -79,5 +79,3 @@ set numbercolor brightblack
 # set functioncolor magenta
 
 ## SYNTAX HIGHLIGHTING
-
-include "~/.nano/*.nanorc"
