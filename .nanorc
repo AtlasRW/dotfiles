@@ -60,12 +60,12 @@ set nohelp
 ## APPEARANCE
 
 ## by default there are no colors, except for errorcolor.
-set titlecolor brightblack,black
-set statuscolor brightwhite,black
-set errorcolor brightred,black
+set titlecolor brightblack
+set statuscolor brightwhite
+set errorcolor brightred
 # set selectedcolor brightwhite,magenta
 # set stripecolor ,yellow
-set numbercolor brightblack,black
+set numbercolor brightblack
 # set keycolor cyan
 # set functioncolor green
 ## In root's .nanorc you might want to use:
