@@ -28,16 +28,16 @@ alias py="python3"
 alias js="node"
 alias ts="ts-node"
 
-alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data"
+alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh"
 
 # FUNCTIONS
 
 docker_new(){
   # docker_new IMAGE NAME PORTS
   if [[ $3 ]]; then
-    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.data/.ssh:/root/.ssh --name $2 -p $3 $1
+    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 -p $3 $1
   else
-    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.data/.ssh:/root/.ssh --name $2 $1
+    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 $1
   fi
   docker_build $1 $2
 }
