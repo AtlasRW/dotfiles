@@ -3,6 +3,7 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
+antigen bundle dotenv
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
@@ -17,6 +18,7 @@ antigen apply
 
 alias ss="cmatrix -s"
 alias home="cd ~"
+
 alias src="exec zsh"
 alias bashrc="vim ~/.bashrc"
 alias zshrc="vim ~/.zshrc"
