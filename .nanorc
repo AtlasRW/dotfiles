@@ -80,7 +80,6 @@ set numbercolor brightblack
 
 ## SYNTAX HIGHLIGHTING
 
-include "~/*.nanorc"
 include "~/.nano/apacheconf.nanorc"
 include "~/.nano/arduino.nanorc"
 include "~/.nano/asciidoc.nanorc"
