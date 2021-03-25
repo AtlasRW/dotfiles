@@ -20,9 +20,9 @@ alias ss="cmatrix -s"
 alias home="cd ~"
 
 alias src="exec zsh"
-alias bashrc="vim ~/.bashrc"
-alias zshrc="vim ~/.zshrc"
-alias p10krc="vim ~/.p10k.zsh"
+alias bashrc="nano ~/.bashrc"
+alias zshrc="nano ~/.zshrc"
+alias p10krc="nano ~/.p10k.zsh"
 
 alias py="python3"
 alias js="node"
