@@ -1,3 +1,10 @@
+## ENVIRONMENT
+
+export VISUAL=nano
+export EDITOR="$VISUAL"
+
+## ANTIGEN
+
 source $HOME/.antigen.zsh
 
 antigen use oh-my-zsh
@@ -11,17 +18,18 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# ALIASES
+## ALIASES
 
 alias ss="cmatrix -s"
 alias home="cd ~"
 
+alias open="nano"
 alias src="exec zsh"
 alias bashrc="nano ~/.bashrc"
 alias zshrc="nano ~/.zshrc"
+alias nanorc="nano ~/.nanorc"
 alias p10krc="nano ~/.p10k.zsh"
 
 alias py="python3"
@@ -30,7 +38,7 @@ alias ts="ts-node"
 
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh"
 
-# FUNCTIONS
+## FUNCTIONS
 
 docker_new(){
   # docker_new IMAGE NAME PORTS
