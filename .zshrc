@@ -1,5 +1,6 @@
 ## ENVIRONMENT
 
+export LANG="en_US.UTF-8" 
 export VISUAL=nano
 export EDITOR="$VISUAL"
 
