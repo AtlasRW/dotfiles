@@ -14,6 +14,7 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle dotenv
+antigen bundle darvid/zsh-poetry
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
