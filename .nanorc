@@ -19,7 +19,7 @@ set autoindent
 # set atblanks
 set nonewlines
 set positionlog
-set nohelp
+# set nohelp
 
 ## APPEARANCE
 
