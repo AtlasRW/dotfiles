@@ -55,7 +55,7 @@ docker_new(){
 docker_build(){
   # docker_build IMAGE NAME
   case $1 in
-    'kalilinux/kali'*)
+    'kali'*)
       docker exec -ti $2 /bin/bash /root/.data/kali.sh
       ;;
     'node'*)
