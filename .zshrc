@@ -67,6 +67,9 @@ docker_build(){
     'php'*)
       docker exec -ti $2 /bin/bash /root/.data/php.sh
       ;;
+    'nginx'*)
+      docker exec -ti $2 /bin/bash /root/.data/nginx.sh
+      ;;
     'httpd'*)
       docker exec -ti $2 /bin/bash /root/.data/httpd.sh
       ;;
