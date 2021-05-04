@@ -33,9 +33,11 @@ alias zshrc="nano ~/.zshrc"
 alias nanorc="nano ~/.nanorc"
 alias p10krc="nano ~/.p10k.zsh"
 
-alias py="python3"
 alias js="node"
 alias ts="ts-node"
+alias py="python"
+alias py3="python3"
+alias py2="python2"
 alias pip="poetry"
 
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh"
@@ -55,23 +57,26 @@ docker_new(){
 docker_build(){
   # docker_build IMAGE NAME
   case $1 in
+    'httpd'*)
+      docker exec -ti $2 /bin/bash /root/.data/httpd.sh
+      ;;
     'kali'*)
       docker exec -ti $2 /bin/bash /root/.data/kali.sh
-      ;;
-    'node'*)
-      docker exec -ti $2 /bin/bash /root/.data/node.sh
-      ;;
-    'python'*)
-      docker exec -ti $2 /bin/bash /root/.data/python.sh
-      ;;
-    'php'*)
-      docker exec -ti $2 /bin/bash /root/.data/php.sh
       ;;
     'nginx'*)
       docker exec -ti $2 /bin/bash /root/.data/nginx.sh
       ;;
-    'httpd'*)
-      docker exec -ti $2 /bin/bash /root/.data/httpd.sh
+    'node'*)
+      docker exec -ti $2 /bin/bash /root/.data/node.sh
+      ;;
+    'php'*)
+      docker exec -ti $2 /bin/bash /root/.data/php.sh
+      ;;
+    'python'*)
+      docker exec -ti $2 /bin/bash /root/.data/python.sh
+      ;;
+    'rust'*)
+      docker exec -ti $2 /bin/bash /root/.data/rust.sh
       ;;
     *)
       docker exec -ti $2 /bin/bash /root/.data/build.sh
