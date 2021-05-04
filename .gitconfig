@@ -1,3 +1,6 @@
 [user]
 	name = atlasrw
 	email = atlasrw@icloud.com
+[core]
+	autocrlf = true
+	ignorecase = true
