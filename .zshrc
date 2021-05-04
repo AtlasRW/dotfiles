@@ -33,9 +33,11 @@ alias zshrc="nano ~/.zshrc"
 alias nanorc="nano ~/.nanorc"
 alias p10krc="nano ~/.p10k.zsh"
 
-alias py="python3"
 alias js="node"
 alias ts="ts-node"
+alias py="python"
+alias py3="python3"
+alias py2="python2"
 alias pip="poetry"
 
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh"
