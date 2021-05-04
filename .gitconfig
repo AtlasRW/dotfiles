@@ -4,3 +4,10 @@
 [core]
 	autocrlf = true
 	ignorecase = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[credential]
+	helper = "!f() { /root/.vscode-server/bin/3c4e3df9e89829dce27b7b5c24508306b151f30d/node /tmp/vscode-remote-containers-d1fc88aa1ade861deb857faf713b9dd75f197179.js $*; }; f"
