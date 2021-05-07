@@ -45,41 +45,41 @@ alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/at
 ## FUNCTIONS
 
 docker_new(){
-  # docker_new IMAGE NAME PORTS
+  # docker_new IMAGE NAME PORTS OTHERS
   if [[ $3 ]]; then
-    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 -p $3 $1
+    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name "$2" -p "$3" "$1" "${@:4}"
   else
-    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 $1
+    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name "$2" -P "$1"
   fi
-  docker_build $1 $2
+  docker_build "$1" "$2"
 }
 
 docker_build(){
   # docker_build IMAGE NAME
   case $1 in
     'httpd'*)
-      docker exec -ti $2 /bin/bash /root/.data/httpd.sh
+      docker exec -ti "$2" /bin/bash /root/.data/httpd.sh
       ;;
     'kali'*)
-      docker exec -ti $2 /bin/bash /root/.data/kali.sh
+      docker exec -ti "$2" /bin/bash /root/.data/kali.sh
       ;;
     'nginx'*)
-      docker exec -ti $2 /bin/bash /root/.data/nginx.sh
+      docker exec -ti "$2" /bin/bash /root/.data/nginx.sh
       ;;
     'node'*)
-      docker exec -ti $2 /bin/bash /root/.data/node.sh
+      docker exec -ti "$2" /bin/bash /root/.data/node.sh
       ;;
     'php'*)
-      docker exec -ti $2 /bin/bash /root/.data/php.sh
+      docker exec -ti "$2" /bin/bash /root/.data/php.sh
       ;;
     'python'*)
-      docker exec -ti $2 /bin/bash /root/.data/python.sh
+      docker exec -ti "$2" /bin/bash /root/.data/python.sh
       ;;
     'rust'*)
-      docker exec -ti $2 /bin/bash /root/.data/rust.sh
+      docker exec -ti "$2" /bin/bash /root/.data/rust.sh
       ;;
     *)
-      docker exec -ti $2 /bin/bash /root/.data/build.sh
+      docker exec -ti "$2" /bin/bash /root/.data/build.sh
       ;;
   esac
 }
