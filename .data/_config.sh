@@ -11,6 +11,6 @@ mv /root/dotfiles/.nanorc /root/.
 mv /root/dotfiles/.p10k.zsh /root/.
 mv /root/dotfiles/.zshrc /root/.
 mv /root/dotfiles/.git /root/.
-rm -rf /root/dotfiles
+rm -Rf /root/dotfiles
 
 cd ~
