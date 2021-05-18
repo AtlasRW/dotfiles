@@ -5,5 +5,3 @@
 !.gitignore
 !.gitconfig
 !.nanorc
-!.data
-!.data/*
