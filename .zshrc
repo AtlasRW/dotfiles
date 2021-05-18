@@ -45,7 +45,7 @@ alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/at
 docker_new(){
   # docker_new IMAGE NAME PORTS
   if [[ $3 ]]; then
-    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 -p $3 $1
+    docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 -p $3 $1 ${@:4}
   else
     docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh --name $2 $1
   fi
