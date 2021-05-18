@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#62a1e0",
+          "properties": {
+            "prefix": "",
+            "style": "full"
+          },
+          "style": "plain",
+          "type": "path"
+        },
+        {
+          "foreground": "#6C6C6C",
+          "properties": {
+            "branch_ahead_icon": "<#88C0D0>⇡ </>",
+            "branch_behind_icon": "<#88C0D0>⇣ </>",
+            "branch_icon": "",
+            "display_stash_count": true,
+            "display_status": true,
+            "display_status_detail": true,
+            "display_upstream_icon": true,
+            "github_icon": "",
+            "local_working_icon": "<#FFAFD7>*</>",
+            "prefix": ""
+          },
+          "style": "plain",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#6b6b6b",
+          "properties": {
+            "style": "austin"
+          },
+          "style": "plain",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#BF616A",
+          "properties": {
+            "prefix": "",
+            "root_icon": "Root"
+          },
+          "style": "plain",
+          "type": "root"
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#696969",
+          "properties": {
+            "time_format": "15:04:05"
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#e9e9e9",
+          "properties": {
+            "always_enabled": true,
+            "display_exit_code": false,
+            "error_color": "#BF616A",
+            "prefix": "$"
+          },
+          "style": "plain",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "console_title": true,
+  "console_title_style": "template",
+  "console_title_template": "{{if .Root}}(Admin){{end}} {{.Path}}"
+}
