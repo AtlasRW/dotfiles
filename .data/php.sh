@@ -28,6 +28,5 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Insta
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
-cd ~
 ln -s /var/www/html ~/apache
 exec zsh
