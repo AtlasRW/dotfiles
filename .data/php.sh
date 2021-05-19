@@ -1,18 +1,17 @@
 #!/bin/bash
 
-cd ~
 apt update
 apt install -y apt-utils curl git less nano software-properties-common ssh unzip wget zsh
 
-git clone -b docker --single-branch https://github.com/AtlasRW/dotfiles.git dotfiles
-mv dotfiles/.antigen.zsh /root/.
-mv dotfiles/.gitconfig /root/.
-mv dotfiles/.gitignore /root/.
-mv dotfiles/.nanorc /root/.
-mv dotfiles/.p10k.zsh /root/.
-mv dotfiles/.zshrc /root/.
-mv dotfiles/.git /root/.
-rm -Rf dotfiles
+git clone -b docker --single-branch https://github.com/AtlasRW/dotfiles.git ~/dotfiles
+mv ~/dotfiles/.antigen.zsh ~/.
+mv ~/dotfiles/.gitconfig ~/.
+mv ~/dotfiles/.gitignore ~/.
+mv ~/dotfiles/.nanorc ~/.
+mv ~/dotfiles/.p10k.zsh ~/.
+mv ~/dotfiles/.zshrc ~/.
+mv ~/dotfiles/.git ~/.
+rm -Rf ~/dotfiles
 
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
 apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
@@ -30,6 +29,6 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Insta
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
-ln -s /var/www/html apache
-
+cd ~
+ln -s /var/www/html ~/apache
 exec zsh
