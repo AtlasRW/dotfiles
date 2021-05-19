@@ -4,12 +4,7 @@ apt update
 apt install -y apt-utils curl git less nano software-properties-common ssh unzip wget zsh
 
 git clone -b docker --single-branch https://github.com/AtlasRW/dotfiles.git ~/dotfiles
-mv ~/dotfiles/.antigen.zsh ~/.
-mv ~/dotfiles/.gitconfig ~/.
-mv ~/dotfiles/.gitignore ~/.
-mv ~/dotfiles/.nanorc ~/.
-mv ~/dotfiles/.p10k.zsh ~/.
-mv ~/dotfiles/.zshrc ~/.
+mv ~/dotfiles/. ~/.
 rm -Rf ~/dotfiles
 
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
@@ -28,5 +23,5 @@ php -r "if (hash_file('SHA384', 'composer-setup.php') === '$HASH') { echo 'Insta
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 rm composer-setup.php
 
-ln -s /var/www/html /root/apache
+ln -s /var/www/html/. ~/apache
 exec zsh
