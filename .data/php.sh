@@ -10,7 +10,6 @@ mv ~/dotfiles/.gitignore ~/.
 mv ~/dotfiles/.nanorc ~/.
 mv ~/dotfiles/.p10k.zsh ~/.
 mv ~/dotfiles/.zshrc ~/.
-mv ~/dotfiles/.git ~/.
 rm -Rf ~/dotfiles
 
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
