@@ -4,7 +4,7 @@ apt update
 apt install -y apt-utils curl git less nano software-properties-common ssh unzip wget zsh
 
 git clone -b docker --single-branch https://github.com/AtlasRW/dotfiles.git ~/dotfiles
-mv ~/dotfiles/* ~/.
+cp ~/dotfiles/. ~
 rm -Rf ~/dotfiles
 
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
