@@ -4,3 +4,5 @@
 [core]
 	autocrlf = input
 	ignorecase = true
+[init]
+	defaultBranch = master
