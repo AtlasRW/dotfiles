@@ -6,3 +6,5 @@
 	ignorecase = true
 [init]
 	defaultBranch = master
+[pull]
+	rebase = false
