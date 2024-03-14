@@ -14,7 +14,6 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle git
-antigen bundle dotenv
 antigen bundle darvid/zsh-poetry
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
@@ -30,7 +29,7 @@ antigen apply
 alias ss="cmatrix -s"
 alias home="cd ~"
 
-alias open="nano"
+#alias open="nano"
 alias src="exec zsh"
 alias bashrc="nano ~/.bashrc"
 alias zshrc="nano ~/.zshrc"
@@ -43,6 +42,7 @@ alias py="python"
 alias py3="python3"
 alias py2="python2"
 alias pip="poetry"
+alias ytdl="yt-dlp"
 
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh"
 
@@ -88,3 +88,19 @@ docker_build(){
       ;;
   esac
 }
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/raphael/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/raphael/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/raphael/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/raphael/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
