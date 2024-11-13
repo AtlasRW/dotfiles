@@ -6,6 +6,11 @@ export EDITOR="$VISUAL"
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+# export JAVA_HOME="/opt/homebrew/opt/openjdk"
+# export JRE_HOME="$JAVA_HOME"
+
+export PATH="$HOME/.local/bin":$PATH
+# export PATH="$JAVA_HOME/bin:$PATH"
 
 ## ANTIGEN
 
@@ -38,11 +43,15 @@ alias p10krc="nano ~/.p10k.zsh"
 
 alias js="node"
 alias ts="ts-node"
-alias py="python"
+alias py="python3"
 alias py3="python3"
 alias py2="python2"
-alias pip="poetry"
+alias pip="pip3"
+# alias pip="poetry"
+alias rust="rustc"
+alias rs="rustc"
 alias ytdl="yt-dlp"
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 alias docker_run="docker run -dti -v /home/atlasrw/.data:/root/.data -v /home/atlasrw/.ssh:/root/.ssh"
 
@@ -104,3 +113,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+zstyle ':completion:*' menu select
