@@ -22,6 +22,7 @@ antigen bundle git
 antigen bundle darvid/zsh-poetry
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle wp-cli
 
 antigen theme romkatv/powerlevel10k
 
@@ -40,6 +41,7 @@ alias bashrc="nano ~/.bashrc"
 alias zshrc="nano ~/.zshrc"
 alias nanorc="nano ~/.nanorc"
 alias p10krc="nano ~/.p10k.zsh"
+alias ff="fastfetch"
 
 alias js="node"
 alias ts="ts-node"
@@ -48,6 +50,7 @@ alias py3="python3"
 alias py2="python2"
 alias pip="pip3"
 # alias pip="poetry"
+alias upm="openupm"
 alias rust="rustc"
 alias rs="rustc"
 alias ytdl="yt-dlp"
@@ -98,22 +101,8 @@ docker_build(){
   esac
 }
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/raphael/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/raphael/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/raphael/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/raphael/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
 zstyle ':completion:*' menu select
+
+fastfetch
